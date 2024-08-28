@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+</head>
+
+<body>
+    <!--
+    Задача 1
+Напиши сценарій, який знайде мінімальне, максимальне значення массиву, а також виведе суму всіх 
+елементів массиву.
+    -->
+    <script>
+        // let min = (array) =>{
+        //     let min = Number.MAX_VALUE;
+
+        //     for (const value of array) {
+        //         if (value < min){
+        //             min = value;
+        //         }
+        //     }
+        //     return min;
+        // }
+
+        let min = (array) => {
+            //return Math.min(array[0], array[1], array[2], array[3]);
+            return Math.min(...array);
+        }
+
+        let max = (array) => {
+            return Math.max(...array);
+        }
+
+        let sum = (array) => {
+            let sum = 0;
+            for (const value of array) {
+                sum += value;
+            }
+            return sum;
+        }
+
+        let test = [1, 2, 4];
+        let values = [10, 20, 4, 6, 11, 9, 125, 1, -8, 0, 3, ...test];
+
+        console.log(min(values))
+        console.log(max(values))
+        console.log(sum(values))
+    </script>
+</body>
+
+</html>
