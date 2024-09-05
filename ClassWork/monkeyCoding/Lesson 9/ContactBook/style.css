@@ -1,0 +1,15 @@
+.contact {
+    background-color: rgba(177, 161, 217, 0.577);
+    padding: 20px;
+    margin: 30px 10px;
+    border-radius: 20px;
+}
+
+#contactForm lable{
+display: inline-block;
+width: 100px;
+}
+
+#contactForm div{
+   margin-bottom: 10px;
+    }
