@@ -1,7 +1,14 @@
+const loader = document.querySelector("#loader");
+
+const showLoader = () => loader.style.display = "block";
+
+const hideLoader = () => loader.style.display = "none";
+
 document.querySelector("#serchBtn").addEventListener("click", () => {
     const city = document.querySelector("#city").value;
     const apiKey = "422341abab9f6d33ba73fcda52bfc846";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+    showLoader();
 
     fetch(apiUrl)
         .then(response => {
@@ -23,6 +30,7 @@ document.querySelector("#serchBtn").addEventListener("click", () => {
         })
         .catch(error => {
             document.querySelector("#forecast").textContent = `${error.message}`;
-        });
+        })
+        .finally(hideLoader);
 }
 ) 
