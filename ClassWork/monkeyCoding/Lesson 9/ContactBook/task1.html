@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <script id="template" type="text/template">
+        <section class="contact">
+            <button onclick="edit({{id}})">Edit</button>
+            <button onclick="remove({{id}})">Delete</button>
+            <h2>{{firstName}} {{lastName}}</h2>
+            <p>Phone: {{phone}}</p>
+            <p>Email: {{email}}</p>
+            <p>{{description}}</p>
+        </section>
+    </script>
+
+    <form action="" id="contactForm">
+        <div>
+            <lable for="firstNameInput">First Name</lable>
+            <input type="text" id="firstNameInput">
+        </div>
+        <div>
+            <lable for="lastNameInput">Last Name</lable>
+            <input type="text" id="lastNameInput">
+        </div>
+        <div>
+            <lable for="phoneInput">Phone</lable>
+            <input type="text" id="phoneInput">
+        </div>
+        <div>
+            <lable for="emailInput">Email</lable>
+            <input type="text" id="emailInput">
+        </div>
+        <div>
+            <lable for="descriptionInput">Description</lable>
+            <input type="text" id="descriptionInput">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+    <section id="contactList">
+        
+    </section>
+<script src="../../../node_modules/mustache/mustache.min.js"></script>
+<script src="./js/model.js"></script>
+<script src="./js/view.js"></script>
+<script src="./js/controller.js"></script>
+</body>
+
+</html>
